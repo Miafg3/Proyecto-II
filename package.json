@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "dev": "npx sass --watch scss/style.scss css/style.css"
-  },
-  "dependencies": {
-    "sass": "^1.99.0"
-  }
-}
