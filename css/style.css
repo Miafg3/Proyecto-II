@@ -234,11 +234,6 @@ body {
 
 /* Contact */
 
-.logo a {
-    color: inherit;
-    text-decoration: none;
-}
-
 .contact-page {
     position: relative;
     z-index: 10;

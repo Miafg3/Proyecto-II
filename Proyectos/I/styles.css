@@ -1,0 +1,127 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background: #050505;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+h1 { 
+    font-size: 1.8rem; 
+    margin-bottom: 2rem; 
+    letter-spacing: 0.05em; 
+}
+
+.input-group { 
+    text-align: left; 
+    margin-bottom: 1.5rem; 
+}
+
+label { 
+    display: block; 
+    font-weight: 600; 
+    color: #ff3b3b; 
+    font-size: 0.8rem; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: 0.1em; 
+}
+
+input {
+    width: 100%; 
+    color: #fff; 
+    padding: 1rem; 
+    outline: none; 
+    font-size: 0.95rem; 
+    border-radius: 12px; 
+    font-family: inherit; 
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08); 
+    transition: 0.3s;
+}
+
+input:focus { 
+    border-color: rgba(255,59,59,0.5); 
+    box-shadow: 0 0 15px rgba(255,59,59,0.15); 
+}
+
+button {
+    width: 100%; 
+    border: none; 
+    color: #fff; 
+    padding: 1rem; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    font-weight: 600; 
+    transition: 0.3s; 
+    margin-top: 1rem;
+    border-radius: 12px; 
+    background: linear-gradient(135deg, #ff3b3b, #d62828);
+}
+
+button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 25px rgba(255,59,59,0.3); 
+}
+
+.result {
+    display: none; 
+    margin-top: 2rem; 
+    padding: 1.2rem; 
+    border-radius: 12px; 
+    background: rgba(255,59,59,0.08);
+    animation: fadeIn 0.5s ease forwards;
+    border: 1px solid rgba(255,59,59,0.2); 
+}
+
+.result h2 { 
+    color: #ff3b3b; 
+    font-size: 1.3rem; 
+    margin-top: 0.3rem; 
+}
+
+.back-btn { 
+    margin-top: 2rem; 
+    font-size: 0.85rem; 
+    display: inline-block; 
+    text-decoration: none; 
+    color: rgba(255,255,255,0.4); 
+    transition: 0.3s; 
+}
+
+.back-btn:hover {
+    color: #fff; 
+}
+
+@keyframes fadeIn {
+    
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    } 
+    
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+}

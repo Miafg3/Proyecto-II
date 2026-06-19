@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día 1 - Generador de Nombre de Bandas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../assets/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Nombre de Bandas</h1>
+        
+        <div class="input-group">
+            <label>¿DÓNDE CRECISTE?</label>
+            <input type="text" id="city" placeholder="Ej. CDMX">
+        </div>
+        
+        <div class="input-group">
+            <label>NOMBRE DE TU MASCOTA</label>
+            <input type="text" id="pet" placeholder="Ej. Firulais">
+        </div>
+        
+        <button onclick="generateBandName()">Generar Nombre</button>
+        
+        <div id="result" class="result">
+            <span>Tu banda se podría llamar:</span>
+            <h2 id="band-name"></h2>
+        </div>
+
+        <a href="../../index.html" class="back-btn">← Volver al Dashboard</a>
+    </div>
+
+    <script>
+        function generateBandName() {
+            const city = document.getElementById('city').value.trim();
+            const pet = document.getElementById('pet').value.trim();
+            const resultDiv = document.getElementById('result');
+            const bandNameH2 = document.getElementById('band-name');
+
+            if (city && pet) {
+                bandNameH2.innerText = `${city} ${pet}`;
+                resultDiv.style.display = 'block';
+            } else {
+                alert('Por favor, llena ambos campos.');
+            }
+        }
+    </script>
+</body>
+</html>
