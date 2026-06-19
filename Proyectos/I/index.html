@@ -31,20 +31,7 @@
         <a href="../../index.html" class="back-btn">← Volver al Dashboard</a>
     </div>
 
-    <script>
-        function generateBandName() {
-            const city = document.getElementById('city').value.trim();
-            const pet = document.getElementById('pet').value.trim();
-            const resultDiv = document.getElementById('result');
-            const bandNameH2 = document.getElementById('band-name');
-
-            if (city && pet) {
-                bandNameH2.innerText = `${city} ${pet}`;
-                resultDiv.style.display = 'block';
-            } else {
-                alert('Por favor, llena ambos campos.');
-            }
-        }
-    </script>
+    <script src="main.js"></script>
+    
 </body>
 </html>
