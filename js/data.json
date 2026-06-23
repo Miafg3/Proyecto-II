@@ -1,0 +1,18 @@
+[
+  {
+    "day": "01",
+    "title": "Generador de Nombres de Bandas",
+    "description": "Combina la ciudad donde creciste y el nombre de tu mascota para generar un nombre de banda divertido.",
+    "concepts": ["Variables", "Strings", "input()", "print()", "f-strings"],
+    "demo": "projects/I/index.html",
+    "github": "https://github.com/Miafg3/"
+  },
+  {
+    "day": "02",
+    "title": "Calculadora de Propinas",
+    "description": "Calcula cuánto debe pagar cada persona después de dividir la cuenta y agregar la propina.",
+    "concepts": ["Variables", "float", "int", "Operadores", "round()"],
+    "demo": "projects/II/index.html",
+    "github": "https://github.com/Miafg3/"
+  }
+]
