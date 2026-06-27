@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Isla del Tesoro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../assets/favicon.png">
+</head>
+<body>
+    <div class="fondo-animado">
+        <div class="niebla n1"></div>
+        <div class="niebla n2"></div>
+    </div>
+
+    <main class="contenedor-juego" id="pantalla-juego">
+
+        <h1 class="titulo-juego">La Isla del Tesoro</h1>
+        <p class="subtitulo-juego">Tu misión es encontrar el tesoro oculto.</p>
+
+        <div id="texto-historia" class="historia-juego">
+            Estás en un cruce de caminos. ¿Hacia dónde quieres ir?
+        </div>
+
+        <div id="contenedor-opciones" class="opciones-juego">
+            <button class="btn-juego" onclick="tomarDecision('izquierda')">Izquierda ➔</button>
+            <button class="btn-juego" onclick="tomarDecision('derecha')">Derecha ➔</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+:root {
+    --color-oro: #ffd700;
+    --color-fondo: #0a0f1d;
+    --color-texto: #f1f5f9;
+    --color-boton: #1e293b;
+    --color-alerta: #ff4757;
+    --color-tarjeta: rgba(20, 27, 47, 0.9);
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    overflow: hidden;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+}
+
+/* --- ANIMACIÓN DE NIEBLA DE FONDO --- */
+
+.fondo-animado {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: 1;
+    width: 100%; 
+    height: 100%;
+    background: radial-gradient(circle, #131c35 0%, #050811 100%);
+}
+
+.niebla {
+    position: absolute;
+    width: 200%; 
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%);
+    opacity: 0.4;
+}
+
+.niebla.n1 {
+    animation: moverNiebla 20s linear infinite;
+}
+
+.niebla.n2 {
+    animation: moverNiebla 35s linear infinite reverse;
+    top: 20%;
+}
+
+@keyframes moverNiebla {
+
+    0% { 
+        transform: translateX(0); 
+    }
+
+    100% { 
+        transform: translateX(-50%);
+    }
+}
+
+
+.contenedor-juego {
+    position: relative;
+    width: 90%;
+    z-index: 2;
+    padding: 3rem;
+    max-width: 550px;
+    text-align: center;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    background-color: var(--color-tarjeta);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+.titulo-juego {
+    font-size: 2.2rem;
+    color: var(--color-oro);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.subtitulo-juego {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+}
+
+.historia-juego {
+    line-height: 1.7;
+    min-height: 90px;
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Animación de entrada de texto */
+
+.aparecer-texto {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+
+    from { 
+        opacity: 0; 
+        transform: translateY(5px); 
+    }
+
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* --- BOTONES INTERACTIVOS --- */
+
+.opciones-juego {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn-juego {
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: var(--color-texto);
+    background-color: var(--color-boton);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-juego:hover {
+    background-color: #334155;
+    border-color: var(--color-oro);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.btn-juego:active {
+    transform: translateY(1px);
+}
+
+.btn-rojo { 
+    background-color: #991b1b; 
+}
+
+.btn-rojo:hover { 
+    background-color: #dc2626; 
+}
+
+.btn-amarillo { 
+    background-color: #ca8a04; 
+    color: #0f172a; 
+}
+
+.btn-amarillo:hover { 
+    background-color: #f59e0b; 
+}
+
+.btn-azul { 
+    background-color: #1e3a8a; 
+}
+
+.btn-azul:hover { 
+    background-color: #2563eb; 
+}
+
+.btn-reiniciar {
+    margin-top: 1rem;
+    background-color: #059669;
+}
+
+.btn-reiniciar:hover { 
+    background-color: #10b981; 
+}
+
+/* --- EFECTOS FINALES --- */
+
+.pantalla-sacudida {
+    border-color: var(--color-alerta);
+    animation: sacudir 0.4s ease-in-out;
+    box-shadow: 0px 0px 30px rgba(255, 71, 87, 0.4);
+}
+
+@keyframes sacudir {
+
+    0%, 100% { 
+        transform: translateX(0); 
+    }
+
+    20%, 60% { 
+        transform: translateX(-10px); 
+    }
+
+    40%, 80% { 
+        transform: translateX(10px); 
+    }
+}
+
+.pantalla-victoria {
+    border-color: var(--color-oro);
+    box-shadow: 0px 0px 40px rgba(255, 215, 0, 0.5);
+}

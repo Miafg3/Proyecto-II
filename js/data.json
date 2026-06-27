@@ -14,5 +14,13 @@
     "concepts": ["Variables", "float", "int", "Operadores", "round()"],
     "demo": "projects/II/index.html",
     "github": "https://github.com/Miafg3/"
+  },
+  {
+    "day": "03",
+    "title": "La Isla del Tesoro",
+    "description": "Juego de aventuras donde tus decisiones determinan si encuentras el tesoro o terminas en Game Over.",
+    "concepts": ["Condicionales", "Operadores lógicos", "Strings", "input()"],
+    "demo": "projects/III/index.html",
+    "github": "https://github.com/Miafg3/"
   }
 ]
