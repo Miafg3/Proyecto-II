@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../../assets/favicon.png">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Piedra, Papel o Tijera</h1>
+        
+        <div class="opciones-juego">
+            <button class="btn-juego" onclick="jugar(0)">Piedra</button>
+            <button class="btn-juego" onclick="jugar(1)">Papel</button>
+            <button class="btn-juego" onclick="jugar(2)">Tijera</button>
+        </div>
+        
+        <div id="result" class="result">
+            <h2 id="resultado-texto"></h2>
+            
+            <div class="pantalla-elecciones">
+                <div class="bloque-eleccion">
+                    <span>Tú elegiste:</span>
+                    <pre id="user-ascii" class="ascii-art"></pre>
+                </div>
+                <div class="bloque-eleccion">
+                    <span>PC eligió:</span>
+                    <pre id="computer-ascii" class="ascii-art"></pre>
+                </div>
+            </div>
+        </div>
+
+        <a href="../../index.html" class="back-btn">← Volver al Dashboard</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
