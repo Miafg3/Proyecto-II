@@ -19,8 +19,16 @@
     "day": "03",
     "title": "La Isla del Tesoro",
     "description": "Juego de aventuras donde tus decisiones determinan si encuentras el tesoro o terminas en Game Over.",
-    "concepts": ["Condicionales", "Operadores lógicos", "Strings", "input()"],
+    "concepts": ["Condicionales", "Operadores lógicos", "Strings"],
     "demo": "projects/III/index.html",
+    "github": "https://github.com/Miafg3/"
+  },
+  {
+    "day": "04",
+    "title": "Piedra, Papel o Tijera",
+    "description": "Enfréntate a la computadora en el clásico juego de Piedra, Papel o Tijera. Elige tu jugada y descubre quién gana en cada partida.",
+    "concepts": ["Listas", "Condicionales", "Operadores lógicos", "Índices", "Variables"],
+    "demo": "projects/IV/index.html",
     "github": "https://github.com/Miafg3/"
   }
 ]

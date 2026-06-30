@@ -16,7 +16,7 @@ function tomarDecision(opcion) {
   // Nivel 1:
   if (opcion === "izquierda") {
     cambiarTexto(
-      "Llegaste a un lago enorme y profundo.<br><br>¿Qué prefieres hacer? ¿Esperar un barco o cruzar nadando?",
+      "Llegaste a un lago enorme y profundo. ¿Qué prefieres hacer? ¿Esperar un barco o cruzar nadando?",
     );
 
     contenedorOpciones.innerHTML = `
@@ -33,7 +33,7 @@ function tomarDecision(opcion) {
   // Nivel 2:
   else if (opcion === "esperar") {
     cambiarTexto(
-      "El barco te llevó a la isla a salvo.<br><br>Ahí encuentras una misteriosa cabaña con 3 puertas: Roja, Amarilla y Azul. ¿Cuál abres?",
+      "El barco te llevó a la isla a salvo. Ahí encuentras una misteriosa cabaña con 3 puertas: Roja, Amarilla y Azul. ¿Cuál abres?",
     );
 
     contenedorOpciones.innerHTML = `
@@ -43,7 +43,7 @@ function tomarDecision(opcion) {
     `;
   } else if (opcion === "nadar") {
     finalizarJuego(
-      "¡Fuiste atacado por una trucha gigante mientras nadabas!<br>☠️ FIN DEL JUEGO ☠️",
+      "¡Fuiste atacado por una trucha gigante mientras nadabas! ☠️ FIN DEL JUEGO ☠️",
       false,
     );
   }
@@ -51,7 +51,7 @@ function tomarDecision(opcion) {
   // Nivel 3:
   else if (opcion === "roja") {
     finalizarJuego(
-      "¡Entraste a una habitación envuelta en llamas!<br>🔥 FIN DEL JUEGO 🔥",
+      "¡Entraste a una habitación envuelta en llamas! 🔥 FIN DEL JUEGO 🔥",
       false,
     );
   } else if (opcion === "amarilla") {
@@ -61,7 +61,7 @@ function tomarDecision(opcion) {
     );
   } else if (opcion === "azul") {
     finalizarJuego(
-      "¡La habitación estaba repleta de cocodrilos hambrientos!<br>🐊 FIN DEL JUEGO 🐊",
+      "¡La habitación estaba repleta de cocodrilos hambrientos! 🐊 FIN DEL JUEGO 🐊",
       false,
     );
   }
