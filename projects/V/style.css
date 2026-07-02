@@ -1,0 +1,248 @@
+:root {
+    --color-oro: #ffd700;
+    --color-exito: #10b981;
+    --color-fondo: #0a0f1d;
+    --color-texto: #f1f5f9;
+    --color-boton: #1e293b;
+    --color-input: #0f172a;
+    --fuente-principal: 'Inter', sans-serif;
+    --color-tarjeta: rgba(20, 27, 47, 0.85);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    padding: 1rem;
+    min-height: 100vh;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    position: relative;
+}
+
+.fondo-animado {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    z-index: 1;
+    background: radial-gradient(circle, #131c35 0%, #050811 100%);
+}
+
+.niebla {
+    position: absolute;
+    width: 200%; 
+    height: 100%;
+    opacity: 0.4;
+    background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%);
+}
+
+.niebla.n1 { 
+    animation: moverNiebla 20s linear infinite;
+}
+
+.niebla.n2 { 
+    top: 20%; 
+    animation: moverNiebla 35s linear infinite reverse;
+}
+
+@keyframes moverNiebla {
+
+    0% { 
+        transform: translateX(0); 
+    }
+
+    100% { 
+        transform: translateX(-50%);
+    }
+}
+
+.contenedor-app {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem;
+    backdrop-filter: blur(8px);
+    background-color: var(--color-tarjeta);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.titulo-app {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-oro);
+}
+
+.subtitulo-app {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.formulario {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    flex-direction: column;
+}
+
+.grupo-control {
+    display: flex;
+    gap: 1rem;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grupo-control label {
+    color: #cbd5e1;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.grupo-control input {
+    width: 80px;
+    padding: 0.6rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    color: var(--color-texto);
+    background-color: var(--color-input);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.grupo-control input:focus {
+    outline: none;
+    border-color: var(--color-oro);
+}
+
+.btn-generar {
+    font-size: 1rem;
+    padding: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+    color: var(--color-texto);
+    background-color: var(--color-boton);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-generar:hover {
+    background-color: #334155;
+    transform: translateY(-2px);
+    border-color: var(--color-oro);
+}
+
+.contenedor-resultado {
+    display: flex;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    background-color: var(--color-input);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.texto-password {
+    display: flex;
+    flex: 1;
+    min-width: 0; 
+    padding: 1rem;
+    color: #94a3b8;
+    overflow-x: auto;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.texto-password.activa {
+    color: var(--color-oro);
+}
+
+.btn-copiar {
+    border: none;
+    cursor: pointer;
+    padding: 0 1.2rem;
+    font-weight: bold;
+    font-family: inherit;
+    color: var(--color-texto);
+    background-color: #334155;
+    transition: background-color 0.2s;
+}
+
+.btn-copiar:not(:disabled):hover {
+    color: #fff;
+    background-color: var(--color-exito);
+}
+
+.btn-copiar:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.back-btn { 
+    margin-top: 2rem; 
+    font-size: 0.85rem; 
+    display: inline-block; 
+    text-decoration: none; 
+    color: rgba(255,255,255,0.4); 
+    transition: 0.3s; 
+}
+
+.back-btn:hover {
+    color: #fff; 
+}
+
+@media (max-width: 400px) {
+    .contenedor-app {
+        padding: 2rem 1rem;
+    }
+    
+    .titulo-app {
+        font-size: 1.5rem;
+    }
+    
+    .grupo-control {
+        gap: 0.4rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .grupo-control input {
+        width: 100%;
+        text-align: left;
+        padding-left: 1rem;
+    }
+    
+    .texto-password {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+    
+    .btn-copiar {
+        padding: 0 1rem;
+        font-size: 0.9rem;
+    }
+}
