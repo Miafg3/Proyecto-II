@@ -30,5 +30,13 @@
     "concepts": ["Listas", "Condicionales", "Operadores lógicos", "Índices", "Variables"],
     "demo": "projects/IV/index.html",
     "github": "https://github.com/Miafg3/"
+  },
+  {
+    "day": "05",
+    "title": "Generador de Contraseñas",
+    "description": "Genera contraseñas seguras y aleatorias personalizando la cantidad de letras, símbolos y números para crear una combinación única.",
+    "concepts": ["Listas", "Bucles", "input()", "join()"],
+    "demo": "projects/V/index.html",
+    "github": "https://github.com/Miafg3/"
   }
 ]

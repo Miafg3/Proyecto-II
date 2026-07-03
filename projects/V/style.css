@@ -87,14 +87,6 @@ body {
     color: var(--color-oro);
 }
 
-.subtitulo-app {
-    color: #94a3b8;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-}
-
 .formulario {
     display: flex;
     gap: 1.2rem;
