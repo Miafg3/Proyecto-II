@@ -1,3 +1,15 @@
+:root {
+    --color-oro: #ffd700;
+    --color-exito: #10b981;
+    --color-error: #ef4444;
+    --color-fondo: #0a0f1d;
+    --color-texto: #f1f5f9;
+    --color-boton: #1e293b;
+    --color-input: #0f172a;
+    --color-tarjeta: rgba(20, 27, 47, 0.85);
+    --color-borde: rgba(255,255,255,.12);
+}
+
 * { 
     margin: 0; 
     padding: 0; 
@@ -5,43 +17,42 @@
 }
 
 body {
-    color: #fff;
+    color: var(--color-texto);
     padding: 2rem;
     display: flex;
     min-height: 100vh;
     overflow-x: hidden;
     align-items: center;
-    background: #050505;
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle,#131c35 0%,#050811 100%);
 }
 
 .container {
     width: 100%;
-    max-width: 550px;
-    padding: 3rem 2rem;
+    max-width: 650px;
+    padding: 3rem;
     text-align: center;
-    border-radius: 25px;
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.03);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: all 0.3s ease;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    background: var(--color-tarjeta);
+    box-shadow: 0 15px 35px rgba(0,0,0,.7);
+    border: 2px solid var(--color-borde);
 }
 
 .titulo-juego { 
     font-size: 1.8rem; 
     margin-bottom: 1rem; 
     letter-spacing: 0.05em;
-    color: #fff;
+    color: var(--color-oro);
 }
 
 .historia-juego {
+    color:#cbd5e1;
     line-height: 1.7;
     min-height: 90px;
     font-size: 1.15rem;
     margin-bottom: 2.5rem;
-    color: rgba(255, 255, 255, 0.9);
 }
 
 .aparecer-texto {
@@ -65,25 +76,27 @@ body {
     gap: 1.2rem;
     flex-wrap: wrap;
     justify-content: center;
+    transition: .3s;
 }
 
 .btn-juego {
     width: 100%; 
-    border: none; 
-    color: #fff; 
     padding: 1rem; 
     font-size: 1rem; 
     cursor: pointer; 
-    font-weight: 600; 
-    transition: 0.3s; 
-    border-radius: 12px; 
+    font-weight: bold; 
+    transition: 0.25s; 
+    border-radius: 10px; 
+    color: var(--color-texto); 
+    background: var(--color-boton);
+    border:1px solid rgba(255,255,255,.15);
     box-shadow: 0 4px 15px rgba(255,59,59,0.1);
-    background: linear-gradient(135deg, #ff3b3b, #d62828);
 }
 
 .btn-juego:hover { 
-    transform: translateY(-3px); 
-    box-shadow: 0 10px 25px rgba(255,59,59,0.3); 
+    background:#334155;
+    border-color:var(--color-oro);
+    transform:translateY(-2px);
 }
 
 .btn-juego:active {
@@ -91,6 +104,7 @@ body {
 }
 
 .btn-rojo { 
+    border-color:#ef4444;
     box-shadow: 0 4px 15px rgba(255,59,59,0.1);
     background: linear-gradient(135deg, #ff3b3b, #991b1b);
 }
@@ -101,6 +115,7 @@ body {
 
 .btn-amarillo { 
     color: #050505;
+    border-color:var(--color-oro);
     background: linear-gradient(135deg, #ffd700, #b29600);
 }
 
@@ -109,6 +124,7 @@ body {
 }
 
 .btn-azul { 
+    border-color:#38bdf8;    
     background: linear-gradient(135deg, #00d2ff, #0066ff);
 }
 
@@ -117,6 +133,7 @@ body {
 }
 
 .btn-reiniciar {
+    border-color:#10b981;
     background: linear-gradient(135deg, #059669, #10b981);
 }
 
@@ -159,6 +176,6 @@ body {
 }
 
 .pantalla-victoria {
-    border-color: rgba(255, 215, 0, 0.6);
-    box-shadow: 0px 0px 50px rgba(255, 215, 0, 0.3);
+    border-color: var(--color-oro);
+    box-shadow: 0px 0px 40px rgba(255, 215, 0, .15);
 }

@@ -12,7 +12,6 @@ function cambiarTexto(nuevoTexto) {
 }
 
 function tomarDecision(opcion) {
-
   // Nivel 1:
   if (opcion === "izquierda") {
     cambiarTexto(
@@ -24,10 +23,10 @@ function tomarDecision(opcion) {
       <button class="btn-juego" onclick="tomarDecision('nadar')">Cruzar nadando</button>
     `;
   } else if (opcion === "derecha") {
-      finalizarJuego(
-        "¡Caíste en un agujero profundo!<br>☠️ FIN DEL JUEGO ☠️",
-        false,
-      );
+    finalizarJuego(
+      "¡Caíste en un agujero profundo!<br>☠️ FIN DEL JUEGO ☠️",
+      false,
+    );
   }
 
   // Nivel 2:
@@ -74,10 +73,10 @@ function finalizarJuego(mensaje, jugadorGano) {
 
   if (jugadorGano) {
     pantallaJuego.classList.add("pantalla-victoria");
-    textoHistoria.style.color = "#ffd700";
+    textoHistoria.style.color = "var(--color-oro)";
   } else {
     pantallaJuego.classList.add("pantalla-sacudida");
-    textoHistoria.style.color = "#ff4757";
+    textoHistoria.style.color = "var(--color-error)";
   }
 
   contenedorOpciones.innerHTML = `
