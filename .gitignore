@@ -1,2 +1,13 @@
-.DS_Store
 .vscode/
+.DS_Store
+
+# Fase 2. 
+
+About/
+Contact/
+Resources/
+
+# Fase 3. 
+
+projects/
+js/
