@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | 100 Días de Código</title>
+    <meta name="description" content="Ponte en contacto conmigo y conoce más sobre mis proyectos.">
+    <link rel="icon" href="../assets/favicon.png">
+    <script src="https://kit.fontawesome.com/63b0c67427.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+
+    <nav class="navbar" aria-label="Navegación principal">
+
+        <div class="logo">
+            <a href="../index.html">100 Días de Código</a>
+        </div>
+
+        <ul class="menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../sobre-mi.html">Sobre mí</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+            <li><a href="../preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+            <li><a href="../recursos.html">Recursos</a></li>
+        </ul>
+
+        <div class="social-networks">
+            <a href="https://www.facebook.com/Miafg03" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/_miafg3_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://github.com/Miafg3" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://dev.to/miafg3" target="_blank" rel="noopener noreferrer" aria-label="Dev.to">
+                <i class="fa-brands fa-dev"></i>
+            </a>
+        </div>
+
+    </nav>
+
+    <main class="contact">
+
+        <div class="contact-glow"></div>
+
+        <header class="contact-header">
+            <!-- <span class="section-badge">CONTACTO</span> -->
+            <p>
+                ¿Tienes alguna pregunta, propuesta o simplemente quieres
+                ponerte en contacto conmigo?
+            </p>
+        </header>
+
+        <section class="contact-content">
+
+            <div class="contact-info">
+                <!-- <h2>Ponte en contacto</h2> -->
+                <p>
+                    Puedes encontrarme también en mis redes y conocer
+                    más sobre los proyectos que estoy desarrollando.
+                </p>
+
+                <div class="contact-socials">
+                    <a href="https://github.com/Miafg3" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/_miafg3_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://dev.to/miafg3" target="_blank" rel="noopener noreferrer" aria-label="Dev.to">
+                        <i class="fa-brands fa-dev"></i>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    Enviar mensaje
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="contacto.js"></script>
+
+</body>
+</html>
