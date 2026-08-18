@@ -27,15 +27,9 @@ projects.forEach((project) => {
                 </div>
 
                 <div class="project-links">
-
                     <a href="${project.demo}" class="project-link" aria-label="Ver demo">
                         <i class="fa-solid fa-eye"></i>
                     </a>
-
-                    <a href="${project.github}" class="project-link" aria-label="Ver código">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-
                 </div>
             </div>
         </article>
