@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas | 100 Días de Código</title>
+    <meta name="description" content="Genera contraseñas aleatorias y personalizadas.">
+    <link rel="icon" href="../../assets/favicon.png">
+    <script src="https://kit.fontawesome.com/63b0c67427.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../project.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="password-generator">
+
+        <a href="../../index.html" class="back-link">← Volver a proyectos</a>
+
+        <section class="project-card">
+            <h1>Generador de Contraseñas</h1>
+            <p>
+                Crea una contraseña personalizada según la cantidad
+                de letras, números y símbolos que quieras utilizar.
+            </p>
+
+            <form id="password-form">
+                <div class="form-group">
+                    <label for="letters">Cantidad de letras</label>
+                    <input type="number" id="letters" min="0" step="1" value="8" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numbers">Cantidad de números</label>
+                    <input type="number" id="numbers" min="0" step="1" value="4" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="symbols">Cantidad de símbolos</label>
+                    <input type="number" id="symbols" min="0" step="1" value="2" required>
+                </div>
+
+                <button type="submit">
+                    Generar contraseña
+                </button>
+            </form>
+
+            <div id="result" class="result hidden" aria-live="polite">
+                <span>Tu contraseña:</span>
+                <strong id="password"></strong>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

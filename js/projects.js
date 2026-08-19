@@ -16,4 +16,13 @@ const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     demo: "projects/calculadora-propinas/index.html",
   },
+
+  {
+    day: "3",
+    title: "Generador de Contraseñas",
+    description:
+      "Genera una contraseña aleatoria según la cantidad de letras, números y símbolos seleccionados.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demo: "projects/generador-contraseñas/index.html",
+  },
 ];
