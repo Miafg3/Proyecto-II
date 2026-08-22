@@ -3,26 +3,23 @@
     --color-texto: #ffffff;
     --color-primario: #ff3b3b;
     --color-primario-hover: #ff5757;
+    --color-navbar-fin: rgba(5, 5, 5, 0.18);
     --color-borde: rgba(255, 255, 255, 0.08);
+    --color-navbar-inicio: rgba(5, 5, 5, 0.82);
     --color-superficie: rgba(255, 255, 255, 0.04);
+    --color-borde-fuerte: rgba(255, 255, 255, 0.18);
     --color-primario-suave: rgba(255, 59, 59, 0.10);
     --color-primario-borde: rgba(255, 59, 59, 0.25);
     --color-texto-apagado: rgba(255, 255, 255, 0.55);
     --color-texto-secundario: rgba(255, 255, 255, 0.75);
 
-    --radius-md: 18px;
-    --radius-lg: 30px;
-    --radius-full: 999px;
-
     --blur-navbar: 14px;
     --altura-navbar: 100px;
-
-    --transition: 0.35s ease;
-
+    --ancho-maximo: 1400px;
     --fuente-principal: "Montserrat", sans-serif;
-
     --shadow-glow: 0 0 30px rgba(255, 59, 59, 0.20);
 
+    --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 1.5rem;
@@ -30,6 +27,14 @@
     --space-2xl: 3rem;
     --space-3xl: 4rem;
     --space-4xl: 6rem;
+
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 30px;
+    --radius-full: 999px;
+
+    --transition: 0.35s ease;
+    --transition-fast: 0.20s ease;
 }
 
 *,
@@ -50,8 +55,10 @@ html {
 }
 
 body {
+    position: relative;
     line-height: 1.5;
     min-height: 100vh;
+    isolation: isolate;
     overflow-x: hidden;
     color: var(--color-texto);
     background: var(--color-fondo);
@@ -60,34 +67,91 @@ body {
     font-family: var(--fuente-principal);
 }
 
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+svg {
+    display: block;
+}
+
 a {
     color: inherit;
     text-decoration: none;
 }
 
-ul {
+ul,
+ol {
     list-style: none;
 }
 
 button,
 input,
-textarea {
+textarea,
+select {
+    border: none;
+    outline: none;
     font: inherit;
+    background: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(100% - 2rem, var(--ancho-maximo));
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    border: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+}
+
+#network {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
     width: 100%;
     z-index: 100;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     backdrop-filter: blur(var(--blur-navbar));
     border-bottom: 1px solid var(--color-borde);
     padding: var(--space-lg) clamp(1.5rem, 5vw, 4rem);
-    background:linear-gradient(to bottom, rgba(5, 5, 5, 0.82), rgba(5, 5, 5, 0.18));
+    background: linear-gradient(to bottom, var(--color-navbar-inicio), var(--color-navbar-fin));
 }
 
 .logo {
@@ -112,8 +176,8 @@ textarea {
 
 .menu a {
     position: relative;
-    color: var(--color-texto-secundario);
     transition: color var(--transition);
+    color: var(--color-texto-secundario);
 }
 
 .menu a:hover,
@@ -143,8 +207,8 @@ textarea {
 }
 
 .social-networks a {
-    width: 42px;
     display: grid;
+    width: 42px;
     aspect-ratio: 1;
     border-radius: 50%;
     place-items: center;
